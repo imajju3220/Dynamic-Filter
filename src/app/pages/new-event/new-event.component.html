@@ -1,0 +1,134 @@
+<div class="container">
+  <h4>Create New Event</h4>
+  <div class="row mb-3">
+    <div class="col-6">
+      <div>
+        <label class="form-label">Event title</label>
+        <input
+          type="text"
+          [(ngModel)]="eventObj.EventName"
+          class="form-control"
+        />
+      </div>
+    </div>
+    <div class="col-6">
+      <div>
+        <label class="form-label">Event location</label>
+        <input
+          type="text"
+          [(ngModel)]="eventObj.Location"
+          class="form-control"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col-3">
+      <div>
+        <label class="form-label">Start Date</label>
+        <input
+          type="date"
+          [(ngModel)]="eventObj.StartDate"
+          class="form-control"
+        />
+      </div>
+    </div>
+    <div class="col-3">
+      <div>
+        <label class="form-label">Start time</label>
+        <input
+          type="text"
+          [(ngModel)]="eventObj.StartTime"
+          class="form-control"
+        />
+      </div>
+    </div>
+    <div class="col-3">
+      <div>
+        <label class="form-label">end date</label>
+        <input
+          type="date"
+          [(ngModel)]="eventObj.EndDate"
+          class="form-control"
+        />
+      </div>
+    </div>
+    <div class="col-3">
+      <div>
+        <label class="form-label">end time</label>
+        <input
+          type="text"
+          [(ngModel)]="eventObj.EndTime"
+          class="form-control"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col-4">
+      <div>
+        <label class="form-label">Max capacity</label>
+        <input
+          type="text"
+          [(ngModel)]="eventObj.Capacity"
+          class="form-control"
+        />
+      </div>
+    </div>
+    <div class="col-4">
+      <div>
+        <label class="form-label">Entry fee</label>
+        <input type="text" [(ngModel)]="eventObj.Price" class="form-control" />
+      </div>
+    </div>
+    <div class="col-4">
+      <div>
+        <label class="form-label">Image URL</label>
+        <input
+          type="url"
+          class="form-control"
+          [(ngModel)]="eventObj.ImageUrl"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col-6">
+      <div class="d-flex align-items-center gap-2">
+        <label class="form-label">is identity manadatory</label>
+        <input [(ngModel)]="eventObj.IsIdentityMandatory" type="checkbox" />
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="d-flex align-items-center gap-2">
+        <label class="form-label">is couple manadatory</label>
+        <input [(ngModel)]="eventObj.IsCoupleEntryMandatory" type="checkbox" />
+      </div>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col-12">
+      <div>
+        <label class="form-label">Description</label>
+        <textarea
+          class="form-control"
+          name=""
+          id=""
+          cols="30"
+          rows="3"
+          [(ngModel)]="eventObj.Description"
+        ></textarea>
+      </div>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col-12">
+      <div>
+        <button class="btn btn-primary me-5">cancel</button>
+        <button class="btn btn-success" (click)="onCreateEvent()">
+          create event
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
