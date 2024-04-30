@@ -10,13 +10,13 @@
     </div>
     <div class="col-sm-4">
       <select name="" id="" class="form-select" [(ngModel)]="searchPrice">
-        <option value=-1 selected>price</option>
+        <option value=-1 selected>select price</option>
         <option *ngFor="let option of this.distinctPrice" value={{option}}>{{option}}</option>
       </select>
     </div>
     <div class="col-sm-4">
       <select name="" id="" class="form-select" [(ngModel)]="searchLocation">
-        <option value="-1" selected>location</option>
+        <option value="-1" selected>select location</option>
         <option *ngFor="let option of this.distinctLocation" value={{option}}>{{option}}</option>
       </select>
     </div>
